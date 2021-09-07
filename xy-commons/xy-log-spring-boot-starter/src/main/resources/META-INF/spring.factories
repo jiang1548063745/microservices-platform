@@ -1,0 +1,10 @@
+org.springframework.context.ApplicationContextInitializer=\
+org.xiaoxianyu.common.log.config.TtlMdcAdapterInitializer
+
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+org.xiaoxianyu.common.log.config.LogAutoConfigure\
+org.xiaoxianyu.common.log.service.impl.LoggerAuditServiceImpl,\
+org.xiaoxianyu.common.log.service.impl.DbAuditServiceImpl,\
+org.xiaoxianyu.common.log.aspect.AuditLogAspect,\
+org.xiaoxianyu.common.log.trace.WebTraceFilter,\
+org.xiaoxianyu.common.log.trace.FeignTraceInterceptor

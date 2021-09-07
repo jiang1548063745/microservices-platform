@@ -1,0 +1,1 @@
+logTrace=org.xiaoxianyu.common.log.trace.DubboTraceFilter

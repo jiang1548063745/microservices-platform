@@ -17,9 +17,10 @@
   <packaging>pom</packaging>
 
   <modules>
+    <module>xy-common-core</module>
     <module>xy-auth-client-spring-boot-starter</module>
     <module>xy-redis-spring-boot-starter</module>
-    <module>xy-common-core</module>
+    <module>xy-log-spring-boot-starter</module>
   </modules>
 
 </project>

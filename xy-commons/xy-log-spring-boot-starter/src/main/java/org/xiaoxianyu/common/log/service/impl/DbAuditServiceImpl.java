@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.scheduling.annotation.Async;
 import org.xiaoxianyu.common.log.model.Audit;
 import org.xiaoxianyu.common.log.properties.LogDbProperties;
 import org.xiaoxianyu.common.log.service.IAuditService;
@@ -63,9 +64,10 @@ public class DbAuditServiceImpl implements IAuditService {
         this.jdbcTemplate.execute(sql);
     }
 
+    @Async
     @Override
-    public boolean save(Audit audit) {
-        int size = this.jdbcTemplate.update(
+    public void save(Audit audit) {
+        this.jdbcTemplate.update(
                 INSERT_SQL,
                 audit.getApplicationName(),
                 audit.getClassName(),
@@ -76,6 +78,5 @@ public class DbAuditServiceImpl implements IAuditService {
                 audit.getOperation(),
                 audit.getTimestamp()
         );
-        return size > 0;
     }
 }

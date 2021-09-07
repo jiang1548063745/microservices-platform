@@ -207,6 +207,13 @@
         <artifactId>dubbo</artifactId>
         <version>${dubbo.version}</version>
       </dependency>
+
+      <!-- 自定义 log 组件  -->
+      <dependency>
+        <groupId>org.xiaoxianyu</groupId>
+        <artifactId>xy-log-spring-boot-starter</artifactId>
+        <version>${project.version}</version>
+      </dependency>
     </dependencies>
   </dependencyManagement>
 

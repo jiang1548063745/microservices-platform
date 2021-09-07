@@ -13,7 +13,7 @@ import java.net.UnknownHostException;
  * @date 2021/09/06 23:02
  */
 //@Sl4j
-public class IpUtils {
+public class IpUtil {
 
     private final static String UNKNOWN_STR = "unknown";
 

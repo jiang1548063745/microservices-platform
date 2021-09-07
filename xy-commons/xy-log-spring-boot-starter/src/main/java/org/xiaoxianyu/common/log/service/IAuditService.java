@@ -14,7 +14,6 @@ public interface IAuditService {
      * 保存审计日志
      *
      * @param audit {@link Audit}
-     * @return 保存回执
      */
-    boolean save(Audit audit);
+    void save(Audit audit);
 }

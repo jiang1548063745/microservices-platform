@@ -25,7 +25,7 @@ public class LoggerAuditServiceImpl implements IAuditService {
     private static final String MSG_PATTERN = "{}|{}|{}|{}|{}|{}|{}|{}";
 
     @Override
-    public boolean save(Audit audit) {
+    public void save(Audit audit) {
         log.debug(
                 MSG_PATTERN,
                 audit.getTimestamp().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS")),
@@ -36,6 +36,5 @@ public class LoggerAuditServiceImpl implements IAuditService {
                 audit.getUserName(),
                 audit.getClientId(),
                 audit.getOperation());
-        return true;
     }
 }

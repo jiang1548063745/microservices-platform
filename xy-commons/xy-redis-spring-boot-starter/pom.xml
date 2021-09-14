@@ -17,11 +17,10 @@
   <description>redis通用组件</description>
 
   <dependencies>
-<!--  TODO  -->
-<!--    <dependency>-->
-<!--      <groupId>com.zlt</groupId>-->
-<!--      <artifactId>zlt-common-core</artifactId>-->
-<!--    </dependency>-->
+    <dependency>
+        <groupId>org.xiaoxianyu</groupId>
+        <artifactId>xy-common-core</artifactId>
+    </dependency>
 
     <dependency>
       <groupId>org.redisson</groupId>
